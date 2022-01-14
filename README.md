@@ -127,8 +127,53 @@ Core Code bootcamp
 ***
 #### 5. Base on the examples and the guide of the low-level language: 
 * 5.1 Create a program to add two numbers given by the user 
+```
+.data
+	number1: .asciiz "\nIngrese el primer numero: "
+	number2: .asciiz "\nIngrese el segundo numero: "
+	result_message: .asciiz "\nEl resultado es de la suma es: "
+.text
+	main:
+		li $v0, 4
+		la $a0, number1
+		syscall
+
+		li $v0, 5
+		syscall
+
+		move $t0, $v0
+
+		li $v0, 4
+		la $a0, number2
+		syscall
+
+		li $v0, 5
+		syscall
+
+		move $t1, $v0
+		
+		add $t2, $t0, $t1
+		
+		li $v0, 4
+		la $a0 result_message
+		syscall
+
+		li $v0, 1
+		move $a0, $t2
+		syscall     
+```
+
 * 5.2 Create a program that display your name
 
+```
+.data
+    print_name: .asciiz "\nMi nombre es Carlos Arenas"
+  .text
+    main:
+      li $v0, 4
+      la $a0, print_name
+      syscall 
+````
 
   
 
