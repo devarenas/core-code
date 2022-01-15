@@ -174,6 +174,24 @@ Core Code bootcamp
       la $a0, print_name
       syscall 
 ````
+***
+***
+
+## Thursday 1/13/22
+
+
+#### 1. Search for real word applications of Javascript
+* JavaScript can be used to create Web applications, server applications, games, web servers, etc.
+
+***
+#### 2. (optional but great) Watch [this](https://www.youtube.com/watch?v=LW6vQNE2jgc&t=1962s) video
+* Done
+
+***
+#### 3. (optional but great) Watch [this](https://www.youtube.com/watch?v=KXkQJBASUOg) video
+* Done
+
+***
 
   
 
