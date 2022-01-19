@@ -192,7 +192,8 @@ Core Code bootcamp
 * Done
 
 ***
-
+### 4. Follow the github course, you can find it [here](https://www.udacity.com/course/version-control-with-git--ud123)
+* Course completed
   
 
 
