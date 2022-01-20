@@ -1,1 +1,1 @@
-# Challenges week 1 - JavaScript
+# Challenges week 2 - JavaScript
