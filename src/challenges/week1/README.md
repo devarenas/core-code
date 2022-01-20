@@ -1,4 +1,6 @@
-# Challenges week 1
+# Challenges week 1 - Introduction to programming & Javascript
+
+
 
 ## Tuesday 1/11/22
 
