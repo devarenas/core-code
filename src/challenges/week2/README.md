@@ -69,3 +69,20 @@ Sometimes you'll want to repeatedly add or subtract one to or from a numeric var
 ***
 #### 4. Create an account in [Codewars](https://www.codewars.com/users/sign_in)
 * Completed
+
+## Tuesday 1/18/22
+
+#### 0. Watch [this](https://www.youtube.com/watch?v=cEBkvm0-rg0) video
+* Tips for Google search
+    * Use quotes => "search"
+    * site:url search in an specific website => site:apple.com
+    * use - to exclude a word => -exclude
+    * after: to find after year of post => after:2000
+    * before: to find before yerar of post => before:2020
+    * year..year to find between two years => 1999..2005
+    * | to look one or the another => a | b
+    * (|) to group and add another value to the search => (a|b)c
+    * * Wildcard to find all results along with what I am looking for=> how to make * videos
+    * Filetype: to find specifics type of file => filetype:PDF
+    * related: to find similiar websites => related:angular.io
+    * cache: Returns most recent cache version of a website => cache:apple.com
