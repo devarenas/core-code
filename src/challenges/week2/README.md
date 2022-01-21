@@ -86,3 +86,54 @@ Sometimes you'll want to repeatedly add or subtract one to or from a numeric var
     * Filetype: to find specifics type of file => filetype:PDF
     * related: to find similiar websites => related:angular.io
     * cache: Returns most recent cache version of a website => cache:apple.com
+
+***
+#### 1. https://www.codewars.com/kata/50654ddff44f800200000004
+
+```
+function multiply(a, b){
+  let result = a * b
+  return result
+}
+
+```
+
+***
+#### 2. https://www.codewars.com/kata/572b6b2772a38bc1e700007a
+
+```
+
+function uniTotal (string) {
+  let sum=0;
+    for(i=0, length = string.length; i<length;i++){
+        let code = string.charCodeAt(i);
+        sum = sum+code;
+    }
+    return sum;  
+}
+
+```
+
+***
+#### 3. https://www.codewars.com/kata/55ad04714f0b468e8200001c
+
+```
+
+function getChar(c){
+      let character = String.fromCharCode(c);
+    return character
+}
+
+```
+
+***
+#### 4. https://www.codewars.com/kata/551f37452ff852b7bd000139
+
+```
+function addBinary(a,b) {
+    let decimal = a+b;
+    let binary = decimal.toString(2);
+    return binary
+}
+
+```
