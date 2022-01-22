@@ -183,3 +183,48 @@ function twiceAsOld(dadYearsOld, sonYearsOld) {
     return result;
 }
 ```
+
+***
+#### 3. https://www.codewars.com/kata/5f77d62851f6bc0033616bd8
+```
+function validSpacing(s) {
+    if(s[0] == ' ') return false;
+    if(s[s.length-1] == ' ') return false;
+
+    const word = s.split(' ').length;
+    const spaces = s.plit('').filter(char => char == " ").length
+
+    
+    return (word - spaces === 1);
+}
+
+```
+
+***
+#### 4. https://www.codewars.com/kata/57eae65a4321032ce000002d
+```
+function fakeBin(x) {
+    let bin = "";
+    const char = x.split('');
+    for(i=0, length = char.length; i< length; i++){
+        if(char[i] < 5){
+            bin = bin+"0";
+        }else{
+            bin = bin+"1";
+        }
+    }
+    return bin;
+}
+
+```
+
+***
+## Thursday 1/20/22
+
+
+#### 1. https://www.codewars.com/kata/57e92e91b63b6cbac20001e5
+```
+
+
+ 
+  
