@@ -187,15 +187,9 @@ function twiceAsOld(dadYearsOld, sonYearsOld) {
 ***
 #### 3. https://www.codewars.com/kata/5f77d62851f6bc0033616bd8
 ```
-function validSpacing(s) {
-    if(s[0] == ' ') return false;
-    if(s[s.length-1] == ' ') return false;
-
-    const word = s.split(' ').length;
-    const spaces = s.plit('').filter(char => char == " ").length
-
-    
-    return (word - spaces === 1);
+function validSpacing2(s) {
+    const reg = /(^\s|\s$|\s{2,})/;
+    return !(reg.test(s));
 }
 
 ```
