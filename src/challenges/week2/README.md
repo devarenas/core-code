@@ -137,3 +137,49 @@ function addBinary(a,b) {
 }
 
 ```
+
+***
+#### 5. https://www.codewars.com/kata/5ad0d8356165e63c140014d4
+```
+
+function finalGrade (exam, projects) {
+    let result;
+    if(exam > 90 || projects > 10){
+        result = 100
+    }else if (exam > 75 && projects > 4){
+        result = 90
+    }else if (exam > 50 && projects > 1){
+        result =75;
+    }else{
+        result = 0;
+    }
+    return result;
+}
+
+```
+
+***
+## Wednesday 1/19/22
+
+
+#### 1. https://www.codewars.com/kata/57e92e91b63b6cbac20001e5
+```
+function dutyFree(normPrice, discount, hol){
+    let totalDiscount = (normPrice*discount)/100;
+    let total = Math.floor(hol/totalDiscount);
+
+    return total;
+}
+
+```
+
+***
+#### 2. https://www.codewars.com/kata/5b853229cfde412a470000d0
+```
+function twiceAsOld(dadYearsOld, sonYearsOld) {
+    let sonDouble = sonYearsOld*2;
+    result = Math.abs(dadYearsOld-sonDouble);
+
+    return result;
+}
+```
