@@ -216,8 +216,69 @@ function fakeBin(x) {
 ## Thursday 1/20/22
 
 
-#### 1. https://www.codewars.com/kata/57e92e91b63b6cbac20001e5
+#### 1. https://www.codewars.com/kata/57faece99610ced690000165
 ```
+function remove(string) {  
+    let reg = /!$/;
+    while(reg.test(string)){
+        string = string.slice(0,-1);
+    }
+    return string;
+  }
+```
+
+***
+#### 2. https://www.codewars.com/kata/5547929140907378f9000039
+```
+function shortcut (string) {
+    let reg = /a|e|i|o|u/;
+    while(reg.test(string)){
+        string = string.replace(reg,"");
+    } 
+    
+    return string;
+}
+
+```
+
+***
+#### 3. https://www.codewars.com/kata/5672a98bdbdd995fad00000f
+```
+const rps = (p1, p2) => {
+    if(p1 == "scissors" && p2 == "rock") return "Player 2 won!";
+    if(p1 == "scissors" && p2 == "paper") return "Player 1 won!";
+    if(p1 == "scissors" && p2 == "scissors") return "Draw!";
+    if(p1 == "rock" && p2 == "paper") return "Player 2 won!";
+    if(p1 == "rock" && p2 == "scissors") return "Player 1 won!";
+    if(p1 == "rock" && p2 == "rock") return "Draw!";
+    if(p1 == "paper" && p2 == "rock") return "Player 1 won!";
+    if(p1 == "paper" && p2 == "scissors") return "Player 2 won!";
+    if(p1 == "paper" && p2 == "paper") return "Draw!";
+};
+
+```
+
+***
+#### 4. https://www.codewars.com/kata/55bf01e5a717a0d57e0000ec
+```
+function persistence(num) {
+    multiply = 1;
+    numString = num.toString();
+    let counter = 0;
+    while(numString.length > 1){
+        numString.split("").forEach(c => multiply *= parseInt(c));
+        numString = multiply.toString();
+        multiply = 1;
+        counter ++;
+    }
+    return counter;
+}
+
+```
+
+***
+#### 5. ✨Complete your 1st [Core Challenge](https://corecode.notion.site/Mission-Statement-666f515d76084c8e8c996b473b4d6317). This is one of the requirements for the certification, where you'll boost your dev professional-brand.
+
 
 
  
