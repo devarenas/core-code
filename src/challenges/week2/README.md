@@ -279,6 +279,8 @@ function persistence(num) {
 ***
 #### 5. ✨Complete your 1st [Core Challenge](https://corecode.notion.site/Mission-Statement-666f515d76084c8e8c996b473b4d6317). This is one of the requirements for the certification, where you'll boost your dev professional-brand.
 
+I'm Carlos, a Systems Engineer Student. I work in at LogMeIn providing L1 technical support. I've not programming background for now. I want to become a full stack developer. I want to work building solutions for a company as Netflix. I am a very responsible person and love help others. I believe team work is important to build great things. 
+
 
 
  
