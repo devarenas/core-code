@@ -177,5 +177,58 @@ fetchingData();
 
 ## Tuesday 2/1/22
 
-#### 1. 
+#### 1. [This](https://www.typescriptlang.org/docs/handbook/intro.html) link is nice to have and read
+* Saved it
+
+
+
+***
+#### 2. [Typescript object type](https://typescript-exercises.github.io/#exercise=1)
+
+```
+
+export interface User {
+    name: string;
+    age: number;
+    occupation: string;
+};
+
+export const users: User[] = [
+    {
+        name: 'Max Mustermann',
+        age: 25,
+        occupation: 'Chimney sweep'
+    },
+    {
+        name: 'Kate Müller',
+        age: 23,
+        occupation: 'Astronaut'
+    }
+];
+
+export function logPerson(user: User) {
+    console.log(` - ${user.name}, ${user.age}`);
+}
+
+console.log('Users:');
+users.forEach(logPerson);
+
+```
+
+***
+#### 3. Read [this](https://blog.logrocket.com/types-vs-interfaces-in-typescript/)
+Differences between interface and type
+* interface:
+    * Declaration merging
+    * extends and implements
+
+* type:
+    * can create intersection with 2 interfaces (use &)
+    * can create union with 2 interfaces (use |)
+    * Tuples using []
+
+
+***
+#### 4. 
+
 
