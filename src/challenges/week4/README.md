@@ -229,6 +229,132 @@ Differences between interface and type
 
 
 ***
-#### 4. 
+#### 4. [Typescript union types](https://typescript-exercises.github.io/#exercise=2)
+
+```
+
+interface User {
+    name: string;
+    age: number;
+    occupation: string;
+}
+
+interface Admin {
+    name: string;
+    age: number;
+    role: string;
+}
+
+export type Person = User | Admin;
+
+export const persons: Person[] = [
+    {
+        name: 'Max Mustermann',
+        age: 25,
+        occupation: 'Chimney sweep'
+    },
+    {
+        name: 'Jane Doe',
+        age: 32,
+        role: 'Administrator'
+    },
+    {
+        name: 'Kate Müller',
+        age: 23,
+        occupation: 'Astronaut'
+    },
+    {
+        name: 'Bruce Willis',
+        age: 64,
+        role: 'World saver'
+    }
+];
+
+export function logPerson(user: Person) {
+    console.log(` - ${user.name}, ${user.age}`);
+}
+
+persons.forEach(logPerson);
+
+```
 
 
+***
+#### 5. [Typescript in operator](https://typescript-exercises.github.io/#exercise=3)
+
+```
+interface User {
+    name: string;
+    age: number;
+    occupation: string;
+}
+
+interface Admin {
+    name: string;
+    age: number;
+    role: string;
+}
+
+export type Person = User | Admin;
+
+export const persons: Person[] = [
+    {
+        name: 'Max Mustermann',
+        age: 25,
+        occupation: 'Chimney sweep'
+    },
+    {
+        name: 'Jane Doe',
+        age: 32,
+        role: 'Administrator'
+    },
+    {
+        name: 'Kate Müller',
+        age: 23,
+        occupation: 'Astronaut'
+    },
+    {
+        name: 'Bruce Willis',
+        age: 64,
+        role: 'World saver'
+    }
+];
+
+export function logPerson(person: Person) {
+    let additionalInformation: string;
+    if ("role" in person) {
+        additionalInformation = person.role;
+    } else {
+        additionalInformation = person.occupation;
+    }
+    console.log(` - ${person.name}, ${person.age}, ${additionalInformation}`);
+}
+```
+
+***
+#### 6. [Find the odd int](https://www.codewars.com/kata/54da5a58ea159efa38000836)
+
+```
+function findOdd(A) {
+    let text = A;
+    const charCounter = {};
+
+    text.forEach( (char) => {
+        charCounter[ char ] = ( charCounter[ char ] || 0 ) + 1;
+    });
+
+    let odd = 0;
+    for ( let counter in charCounter){
+        if ( charCounter[counter]%2 !== 0) odd = counter;
+    }
+    
+    return Number(odd);
+}
+```
+
+
+***
+#### 7. [Stop gninnipS My sdroW!](https://www.codewars.com/kata/5264d2b162488dc400000001)
+
+```
+```
