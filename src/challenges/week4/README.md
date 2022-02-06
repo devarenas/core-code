@@ -701,6 +701,9 @@ function find(rats) {
 ***
 #### 6. ✨Complete your 3rd [Core Challenge](https://corecode.notion.site/GitHub-Boost-Guide-167914056cff4522886a78756f659e47). This is one of the requirements for the certification, where you'll boost your dev professional-brand.
 
-https://github.com/devarenas
+* https://github.com/devarenas
+
+***
+***
 
 
