@@ -357,4 +357,225 @@ function findOdd(A) {
 #### 7. [Stop gninnipS My sdroW!](https://www.codewars.com/kata/5264d2b162488dc400000001)
 
 ```
+function spinWords(string){
+    text = string.split(" ")
+    result = "";
+    text.forEach( (char, i) => {
+        if (char.length >= 5){
+            char = char.split("");
+            char = char.reverse();
+            text[i] = char
+            let reverseWord = "";
+            char.forEach( (reverse) => {
+                reverseWord = reverseWord+reverse; 
+            })
+        text [i] = reverseWord;
+        reverseWord = "";
+
+        }
+
+    })  
+
+    text.forEach((join) => {
+        result =  `${result} ${join}`;
+    })
+    return result.trim();
+}
+
 ```
+
+
+***
+
+## Wednesday 2/2/22
+
+#### 1. [Array.diff](https://www.codewars.com/kata/523f5d21c841566fde000009)
+```
+function arrayDiff(a, b) {
+    let text = a
+    for( var i = 0; i < a.length; i++){ 
+        for (var j = 0; j < b.length; j++){
+            if ( a[i] === b[j]) {
+            text.splice(i, 1);
+            i--;
+            }
+        }  
+    }
+    return text;
+}
+
+```
+
+***
+#### 2. [Create Phone Number](https://www.codewars.com/kata/525f50e3b73515a6db000b83)
+
+```
+function createPhoneNumber(numbers){
+    let phoneNumber = "";
+    let number = numbers;
+    number.splice(0,0, "(");
+    number.splice(4,0, ") ");
+    number.splice(8,0, "-");
+
+    number.forEach( (char) => {phoneNumber = phoneNumber+char})
+    return phoneNumber;
+}
+```
+
+***
+#### 3. Watch [this](https://www.youtube.com/watch?v=m_MQYyJpIjg)
+
+##### Object Oriented Programming (OOP) 
+
+* Object: A thing from the real world Also name as entity.
+    * Abstraction: simplify reality
+        * Class: a template for creating objects
+        * Attributes, Fields, Properties
+        * Operations, Methods = actions
+        * Object is an instance of a Class => instantiation
+        * Method New is called constructor
+    * Encapsulation: Hiding data and complexity
+    * Inheritance: A class can derive ts methods and properties from another class
+        * Base class
+        * Super Class > Subclass
+    * Polymorphism: A class can implement and inherited method in its own way
+
+
+***
+#### 4. Watch [this](https://www.youtube.com/watch?v=08CWw_VD45w)
+
+FP vs OOP
+
+##### FP
+* Can be named almost anything
+* Any number of parameters can be passed
+* Can return almost anything
+
+* Functions only
+* No side effects
+* Fixed control flow
+
+* Functional Programming is a method of problem solving
+* Pure Functions
+* Strict control flow (input>Output)
+
+
+##### OOP
+* Claess
+	* Contain Attibutes & Methods
+	* Produce "objects"
+
+It depends what is the better to use based on the type of solution/project you need to build
+
+***
+#### 5. Read [this](https://medium.com/from-the-scratch/oop-everything-you-need-to-know-about-object-oriented-programming-aee3c18e281b)
+
+
+OOP: Everything you need to know about Object Oriented Programming
+
+Basic Terminologies:
+* Object: It’s the instance of a class/ it’s the working entity of a class.
+* Class: It is a template or blue print about the capability of what an object can do.
+* Method: The behaviours of a class. It tells what a method can do.
+* Instance: Object and Instance both are same with small difference.
+
+OOPs Concepts:
+* Encapsulation
+* Abstraction
+* Polymorphism
+* Inheritance
+
+***
+#### 6. Read [this](https://naveenkumarkoppala.medium.com/typescript-oops-c327678744b0)
+
+##### TypeScript — OOP’s Concepts
+
+It is the process of representing the real time entities into programming to provide a solution for a problem in the form of application.
+* Classes : A class is a blueprint for creating objects.
+```
+class class_name { 
+   //class scope 
+}
+
+```
+
+* Object: Real time entity is nothing but an Object.
+* Inheritance: It is the process of a class extends another class to reuse the existing resource. The class whose features are inherited is known as superclass.
+The class that inherits the other class is known as a subclass.
+* constructor: If we want to create an object, then we have to use constructor. If we don’t have a constructor, then a default constructor will provide by typescript.
+* Polymorphism: It is the ability of an entity to provide multiple functionalities based on different inputs is know as polymorphism.
+	* In TS we implement polymorphism method overloading, method overriding.
+	* Method Overloading : Methi overloading is a mechanism or ability to create multiple methods with the same name but different parameter types and return type.
+	* Method Overriding : Method Overriding is a process of overthrowing a method of super class by method of same name and parameters in sub class.
+Method Overriding is useful when sub class wants to modify the behavior of super class for certain tasks.
+* Abstraction:
+It is the process of providing only required details. We implement abstraction using interface and abstract class.
+* Interface: An interface is a collection of static variables and unimplemented methods.
+* Encapsulation: It is the process of binding the data its code together into a single unit.
+
+
+***
+#### 7. Read [this](https://rambabupadimi.medium.com/typescript-object-oriented-programming-7a6fd905d90e)
+
+##### TypeScript — Object Oriented Programming
+
+* Object-oriented programming is programming paradigm based on the concept of objects, which can contain data, in the form of fields, and code, in the form of procedures.
+* Classes: Class is user defined blueprint, it represents set of properties or methods that are common to all objects of one type.
+* Inheritance: It is mechanism in which one object acquires all the properties and behaviours of parent object. You can reuse methods and fields of parent class.
+* Abstract Class: It is class which that is declared abstract. Abstract classes are base classes from which other classes may be derived. It contains abstract and non-abstract methods.We can not initiate directly to the abstract classes.
+* Interface: In typescript interfaces represents object type or structure, below we can define wheel structure
+* Interface — class type: Like in other languages java, c# etc, In typescript also class can implement interface. Interface contains only abstract methods these methods does not have body.
+* Public, Private and Protected Modifiers:
+    * Typescript default variables are public, we can access variables outside the class.
+    * If we declare variable private, we can not access variable outside the class.
+    * In inheritance if we declare parent class variables as private, we cant access variables in subclass. To access variables in subclass we need to make it as protected in parent class.
+* Static variables & methods:
+    * Static variables are defined using static keyword, To access static variable no need to create object for class. we can directly access like this classname.variable name. The static variable gets memory only once in the class area at the time of class loading.
+    * Any function have prefix static that function treated as static function. Inside static function we can access only static variables. we can directly call static methods like this. classname.method name
+* Singleton :
+It is creational design pattern. Its main aim is exists only one instance to the class through out life of application. To create singleton object we make it constructor as private, so that we cant create new instance to the class.
+
+* readonly, optional parameters :
+	* If you put prefix readonly to variable we can access the value inside and outside of the class, but we cant change the value. we can assign value to variable directly at the time of declare variable or inside class constructor.
+	* If you want to make parameter is optional just put (?) after variable name.
+* constructor , super :
+	* Constructor is special method which is used to initialize objects. It is called when the class object is created.
+	* Super is used to call parent class constructor method and we can send parameters data from subclass to parent class constructor using super.
+    
+    
+    
+***
+## Wednesday 2/2/22
+
+#### 1. [Detect Pangram](https://www.codewars.com/kata/545cedaa9943f7fe7b000048)
+
+```
+function isPangram(string){
+    let alphabet = "abcdefghijklmnopqrstuvwxyz";
+    let counter = 0;
+    result = false;
+
+
+    let copy = string;
+    let reg = /\s/g;
+    copy = copy.toLowerCase();
+    copy = copy.replace(reg, "");
+    alphabet = alphabet.split("");
+
+    alphabet.forEach((char) => {    
+        if(copy.includes(char)){
+        counter++;
+    }
+    })
+if(counter >=26){
+    result = true
+}
+
+return result;
+}
+```
+    
+***
+#### 2. [Find the missing letter](
+    
+
