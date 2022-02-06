@@ -281,6 +281,8 @@ function persistence(num) {
 
 I'm Carlos, a Systems Engineer Student. I work in at LogMeIn providing L1 technical support. I've not programming background for now. I want to become a full stack developer. I want to work building solutions for a company as Netflix. I am a very responsible person and love help others. I believe team work is important to build great things. 
 
+***
+***
 
 
  
