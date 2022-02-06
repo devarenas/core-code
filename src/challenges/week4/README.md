@@ -576,6 +576,131 @@ return result;
 ```
     
 ***
-#### 2. [Find the missing letter](
+#### 2. [Find the missing letter](https://www.codewars.com/kata/5839edaa6754d6fec10000a2)
+```
+function findMissingLetter(array){
+    let lettersArray = array;
+    let codeASCII = lettersArray[0].charCodeAt(0);
+    let missingLetter = "";
+
+    lettersArray.forEach((char) => {
+        if(codeASCII === char.charCodeAt(0)){
+            codeASCII++;
+        } else {
+            missingLetter = String.fromCharCode(codeASCII);
+        return;
+        }
+}) 
+return missingLetter;
+}
+```
+
+***
+#### 3. [Find the unique number](https://www.codewars.com/kata/585d7d5adb20cf33cb000235)
+
+```
+function findUniq(arr) {
+    let uniq = 0;
+    let numberArray = arr;
+    let objectCounter = {};
+    numberArray.forEach( (char) => {
+        objectCounter[ char ] = ( objectCounter[ char ] || 0 ) + 1;
+    });
+    for ( let c in objectCounter){
+        if (objectCounter[c] === 1) {
+            uniq = c
+        }    
+    }
+    return Number(uniq);
+}
+
+```
+
+***
+#### 4. [Reverse or rotate?](https://www.codewars.com/kata/56b5afb4ed1f6d5fb0000991)
+
+```
+function revrot(str, sz) {
+    let chunkResult = "";
+    if(sz <= 0 || str === "") return chunkResult;
+    let chunk = str;
+    let chunk2 = chunk;
+    let copyChunk = chunk;
+    let chunkArray = [];
     
+
+    for(i=0, length = chunk.length; i<length; i+=sz){
+        if(chunk2.length >= sz){
+            copyChunk = chunk2.substring(0,sz);
+            chunkArray.push(copyChunk);
+            chunk2 = chunk2.slice(sz);
+        }else{
+        }
+    
+}
+
+for(j=0, length1 = chunkArray.length; j<length1; j++){
+    let test = chunkArray[j];
+    let cubeSum = 0;
+    for(i=0, length = test.length;i<length;i++){
+        let num = 0;
+        cubeSum = cubeSum + Math.pow(Number(test[i]),3);
+    }
+    
+    if(cubeSum%2 === 0){
+        test = test.split("");
+        test.reverse();
+        let reverse = ""
+        test.forEach((char) =>{
+            reverse = reverse+char
+        })
+        chunkResult = chunkResult + reverse;
+    } else {
+        let rotate = "";
+        rotate = test.charAt(0)
+        test=test.replace(test[0],"");
+        test= test+rotate;
+        chunkResult = chunkResult + test
+    }
+}
+return chunkResult;
+}
+
+```
+
+***
+#### 5. [What's Your Poison?](https://www.codewars.com/kata/58c47a95e4eb57a5b9000094)
+```
+function find(rats) {
+    let bottle = [];
+    let conversion = "";
+    let rat = {
+    9: 0,    8: 0,    7: 0,    6: 0,
+    5: 0,    4: 0,    3: 0,    2: 0,
+    1: 0,    0: 0
+    };
+
+    rats.forEach ((char) =>{
+        rat[char] = 1
+    });
+
+    for (let ratCount in rat){
+        bottle.push(rat[ratCount]);
+    };
+
+    bottle.reverse();
+    bottle.forEach((char) =>{
+        conversion = conversion+char;
+    });
+    conversion = parseInt(conversion,2);
+    return conversion;
+}
+
+```
+
+***
+#### 6. ✨Complete your 3rd [Core Challenge](https://corecode.notion.site/GitHub-Boost-Guide-167914056cff4522886a78756f659e47). This is one of the requirements for the certification, where you'll boost your dev professional-brand.
+
+https://github.com/devarenas
+
 
