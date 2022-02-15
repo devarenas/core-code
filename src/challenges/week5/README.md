@@ -194,8 +194,145 @@ export function warnTheSheep(queue: string[]): string {
 ***
 ## Tuesday 2/8/22
 
-#### 1. 
+#### 1. [A Rule of Divisibility by 13](https://www.codewars.com/kata/564057bc348c7200bd0000ff) Using ``Typescript``
 
+```
+export function thirt(n: number): number {
 
+    const mod = [1,10,9,12,3,4];
+    let entry = n;
+    let entryString: string[] = [];
+    let sum = 0;
+    let modCount = 0;
+    let count = 0
+    let acum = 0;
+    let validation = true;
+
+    while(validation) {
+        if(count === 0){
+            entryString = entry.toString().split("").reverse();
+            entryString.forEach((char: string, i: number)=>{
+                acum += Number(char)*mod[modCount];
+                console.log(char+" "+mod[modCount]);
+                mod[modCount+1] ? modCount++ : modCount = 0;
+                console.log(acum);
+            });
+        count++;
+        modCount=0;
+        } else if(count === 1){
+            entryString = acum.toString().split("").reverse();
+            entryString.forEach((char: string, i: number)=>{
+                sum += Number(char)*mod[modCount];
+                console.log(char+" "+mod[modCount]);
+                mod[modCount+1] ? modCount++ : modCount = 0;
+            });
+        count++;
+        modCount=0;
+
+        } else {
+            if(sum === acum){
+                break;
+            
+            } else {
+                acum = sum;
+                sum = 0;
+                entryString = acum.toString().split("").reverse();
+                entryString.forEach((char: string, i: number)=>{
+                    sum += Number(char)*mod[modCount];
+                    console.log(char+" "+mod[modCount]);
+                    mod[modCount+1] ? modCount++ : modCount = 0;
+                
+                });
+            count++
+            modCount=0;
+            }
+        }
+    }
+    return sum;
+}
+
+```
+
+***
+#### 2. [Playing with digits](https://www.codewars.com/kata/5552101f47fc5178b1000050) Using ``Typescript`
+
+```
+export class G964 {
+
+    public static digPow = (n: number, p: number) => {
+
+      let nString = n.toString().split("");
+      let nSum = 0
+      nString.forEach ((char ) => {
+          nSum += (Math.pow(Number(char), p))
+          p++
+      })
+
+      let result = nSum/n;
+
+      return Number.isInteger(result) ? result : -1;
+  }
+}
+
+```
+
+***
+#### 3. [Valid Braces](https://www.codewars.com/kata/5277c8a221e209d3f6000b56) Using ``Typescript``
+```
+export function validBraces(braces: string): boolean {
+    let answer = false;
+    let parens = braces;
+    let counter = 0;
+    let error = 0;
+    let reg = /^(\)|\}|\])|(\(|\{|\[)$/gm;
+    let parensValidate :string[] = [];
+    let copyBraces: string[] = [];
+    let objectBraces = {
+        "phar": 0,
+        "brack": 0,
+        "sqbrack": 0,
+    }
+    if(parens.match(reg)){
+        return answer;
+    } else{
+        parensValidate = parens.split("");
+        parensValidate.forEach( (char,i) => {
+            if(char == "("){
+                copyBraces.push(char)
+                counter++
+            }else if(char == ")" && copyBraces[counter-1] == "("){
+                copyBraces.splice(-1,1);
+                counter--;
+            }else if(char == "{"){
+                copyBraces.push(char)
+                counter++;
+            }else if(char == "}" && copyBraces[counter-1] == "{"){
+                copyBraces.splice(-1,1);
+                counter--;
+            }else if(char == "["){
+                copyBraces.push(char)
+                counter++;
+            }else if(char == "]" && copyBraces[counter-1] == "["){
+                copyBraces.splice(-1,1);
+                counter--;
+            }else{
+                console.log("no coincidi con nada")
+                error++;
+            }
+        })
+    }
+
+    if(copyBraces.length === 0 && error === 0){
+        answer = true;
+    }else{
+        answer = false;
+    }
+    return answer;
+}
+
+```
+
+***
+#### 4. [Tic-Tac-Toe]( Using Javascript
         
         
