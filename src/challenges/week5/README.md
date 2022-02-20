@@ -333,6 +333,73 @@ export function validBraces(braces: string): boolean {
 ```
 
 ***
-#### 4. [Tic-Tac-Toe]( Using Javascript
-        
+#### 4. [Tic-Tac-Toe](https://www.codewars.com/kata/5216a87cbf53a9c30f0000dc) Using ``Javascript``
+
+```
+```
+
+
+#### 5. [Tic-Tac-Toe-like table Generator](https://www.codewars.com/kata/5b817c2a0ce070ace8002be0) Using ``Javascript``
+
+```
+```
+
+***
+## Wednesday 2/9/22
+
+#### 1. [Duplicate Encoder](https://www.codewars.com/kata/54b42f9314d9229fd6000d9c/train/typescript) Using ``Typescript``
+
+```
+```
+
+***
+#### 2. [Find the odd int](https://www.codewars.com/kata/54da5a58ea159efa38000836/train/typescript) Using ``Typescript``
+
+```
+```
+
+***
+#### 3. [Which are in?](https://www.codewars.com/kata/550554fd08b86f84fe000a58/train/typescript) Using ``Typescript``
+
+```
+```
+
+***
+#### 4. [Sums of Parts](https://www.codewars.com/kata/5ce399e0047a45001c853c2b/train/typescript) Using ``Typescript``
+
+```
+```
+
+
+***
+#### 5. [Consecutive strings](https://www.codewars.com/kata/56a5d994ac971f1ac500003e) Using ``Typescript``
+
+```
+```
+
+
+***
+## Thursday 2/10/22
+
+#### 1. [Tile](https://github.com/corecodeio/bootcamp-from-scratch/blob/main/src/technologies/2022/week5/Exercices/E0/desc/ED0W5.md) Using ``Typescript``
+
+```
+```
+
+***
+#### 2. [Time](https://github.com/corecodeio/bootcamp-from-scratch/blob/main/src/technologies/2022/week5/Exercices/E1/desc/ED1W5.md) Using ``Typescript``
+
+```
+```
+
+***
+#### 3. [Rational](https://github.com/corecodeio/bootcamp-from-scratch/blob/main/src/technologies/2022/week5/Exercices/E2/desc/ED2W5.md) Using ``Typescript``
+
+```
+```
+
+***
+***
+
+
         
