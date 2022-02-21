@@ -350,6 +350,53 @@ export function validBraces(braces: string): boolean {
 #### 1. [Duplicate Encoder](https://www.codewars.com/kata/54b42f9314d9229fd6000d9c/train/typescript) Using ``Typescript``
 
 ```
+export function duplicateEncode(word: string){
+    console.log(word);
+    let copyString = word;
+    copyString = copyString.toLowerCase();
+    let copySplit = copyString.split("");
+    let duplicates = "";
+    let uniques = "";
+    let rec = "";
+    let finalEncode = "";
+
+    copySplit.forEach(char => {
+        let arrayResult = copySplit.filter((letter, index) => {
+            if (char === letter){
+                rec+= index.toString()+",";
+            }
+            return letter;
+        })
+        if(rec.length > 3){
+            if(!duplicates.includes(rec)){
+                duplicates+= rec;    
+            }
+            
+        }else {
+            uniques += rec;
+        }
+        rec = "";
+    })
+
+    duplicates = duplicates.slice(0,-1);
+    uniques = uniques.slice(0,-1);
+    
+    if(duplicates!==""){
+        duplicates.split(",").forEach( char => {
+            copySplit[Number(char)] = ")"
+        })
+    }
+
+
+    if(uniques!==""){
+        uniques.split(",").forEach( char => {
+            copySplit[Number(char)] = "("
+        })
+    }
+    copySplit.forEach(char => finalEncode+=char)
+
+    return finalEncode;
+}
 ```
 
 ***
