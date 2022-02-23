@@ -435,14 +435,12 @@ export function duplicateEncode(word: string){
 ***
 #### 2. [Time](https://github.com/corecodeio/bootcamp-from-scratch/blob/main/src/technologies/2022/week5/Exercices/E1/desc/ED1W5.md) Using ``Typescript``
 
-```
-```
+[My solution](https://github.com/devarenas/time_typescript)
 
 ***
 #### 3. [Rational](https://github.com/corecodeio/bootcamp-from-scratch/blob/main/src/technologies/2022/week5/Exercices/E2/desc/ED2W5.md) Using ``Typescript``
 
-```
-```
+[My solution](https://github.com/devarenas/rational_typescript)
 
 ***
 ***
