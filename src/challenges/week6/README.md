@@ -4,6 +4,158 @@
 
 #### 1. Read [this](https://github.com/corecodeio/bootcamp-from-scratch/blob/main/src/technologies/2022/week6/Example/Input.md)
 
+### Input Class
+We can get different inputs from user
+* Input
+* Form
+* Select
+* Select By Id
+* Confirm
+
+## Input
+
+* Function: getInput
+* Arguments:
+  * message (string)
+* Output: Object
+
+Example Code:
+```
+import { Input } from './Input';
+export class Main {
+  async start() {
+    // Get a single input prompt
+    let input = await Input.getInput('Where are you from?');
+    console.log(input);
+  }
+}
+```
+
+Output:
+```
+{
+  data: 'Guatemala',
+}
+```
+
+## Form
+
+* Function: getForm
+* Arguments:
+  * message (string)
+  * choices (Choices[])
+* Output: Object
+
+Example Code:
+```
+import { Input } from './Input';
+export class Main {
+  async start() {
+    // Get a form prompt
+    const formChoices = [
+      { name: 'age', message: 'What is your age' },
+      { name: 'lastName', message: 'What is your last name' },
+      { name: 'movie', message: 'What is your favorite movie' },
+    ];
+    let input = await Input.getForm('Personal Information', formChoices);
+    console.log(input);
+  }
+}
+```
+
+Output:
+```
+{
+  data: { age: '26', lastName: 'Maldonado', movie: 'Back to the future' }
+}
+```
+## Select
+* Function: getSelect
+* Arguments:
+  * message (string)
+  * choices (SelectChoice[])
+* Output: Object
+
+Example code:
+```
+import { Input } from './Input';
+export class Main {
+  async start() {
+    // Get a select prompt
+    const selectChoices = [
+      { option: 1, message: 'Pizza' },
+      { option: 2, message: 'Sandwich' },
+      { option: 3, message: 'Cofee' },
+      { option: 4, message: 'Lasagna' },
+    ];
+    let input = await Input.getSelect('Menu', selectChoices);
+    console.log(input);
+  }
+}
+```
+Otuput:
+```
+{
+  data: 3,
+}
+```
+
+## Select By ID
+* Function: getSelectById
+* Arguments:
+  * message (string)
+  * choices (Choices[])
+* Output: Object
+
+Example code:
+```
+import { Input } from './Input';
+export class Main {
+  async start() {
+    // Get a select by id prompt
+    const selectByIdChoices = [
+      { name: '#64b5f6', message: 'Blue Lighten 2' },
+      { name: '#009688', message: 'Purple Lighten 1' },
+      { name: '#ec407a', message: 'Pink Lighten 1' },
+      { name: '#f44336', message: 'Red' },
+    ];
+    let input = await Input.getSelectById('Select a color', selectByIdChoices);
+    console.log(input);
+  }
+}
+```
+
+Output:
+```
+{
+  data: '#009688',
+}
+```
+
+## Confirm
+* Function: getConfirm
+* Arguments:
+  * message (string)
+* Output: Object
+
+Example code:
+```
+import { Input } from './Input';
+export class Main {
+  async start() {
+    // Get a confirmation prompt
+    let input = await Input.getConfirm('Are you a developer');
+    console.log(input);
+  }
+}
+```
+Output:
+```
+{
+  data: true,
+}
+````
+
 
 ***
 #### 2. [Menu](https://github.com/corecodeio/bootcamp-from-scratch/blob/main/src/technologies/2022/week6/Exercices/E0/desc/ED0W6.md) Using ``Typescript``
