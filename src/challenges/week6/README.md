@@ -4,7 +4,7 @@
 
 #### 1. Read [this](https://github.com/corecodeio/bootcamp-from-scratch/blob/main/src/technologies/2022/week6/Example/Input.md)
 
-### Input Class
+### Input Class (get documentation [here](https://github.com/devarenas/core-code/blob/bb196f48ba142b8e83e704d23891230340a61653/src/source_links/input.ts))
 We can get different inputs from user
 * Input
 * Form
@@ -160,8 +160,7 @@ Output:
 ***
 #### 2. [Menu](https://github.com/corecodeio/bootcamp-from-scratch/blob/main/src/technologies/2022/week6/Exercices/E0/desc/ED0W6.md) Using ``Typescript``
 
-```
-```
+[My solution](https://github.com/devarenas/menu_typescript)
 
 ***
 ## Tuesday 2/15/22
