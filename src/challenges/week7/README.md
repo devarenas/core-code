@@ -73,7 +73,7 @@
 ***
 ### 5. ✨Complete your 4th Core Challenge, the [Scrum Essentials Certification](https://university.scrumnetwork.com/offers/C5fmudK2/checkout?coupon_code=ESSENTIALS2022).
 
-
+* Done. [view certificate](https://www.credential.net/74986558-71a6-4199-a839-e31f15c2588b#gs.s6wjp4)
 
 
 
