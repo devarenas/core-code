@@ -176,6 +176,151 @@ Output:
 ***
 #### 3. [Interfaces](https://docs.microsoft.com/en-us/learn/modules/typescript-implement-interfaces/)
 
+## Implement interfaces in TypeScript
+
+JavaScript doesn't support interfaces. In TypeScript, you can use interfaces as you would in traditional object-oriented programming. You can also use interfaces to define object types.
+
+To install Typescript use
+```
+npm install -g typescript
+```
+## Overview of interfaces in TypeScript
+
+### What is an interface
+
+You can use interfaces to describe an object, naming and parameterizing the object's types, and to compose existing named object types into new ones.
+
+This simple interface defines the two properties and a method of an ``Employee`` object.
+
+```
+interface Employee {
+    firstName: string;
+    lastName: string;
+    fullName(): string;
+}
+```
+
+Notice that the interface doesn't initialize or implement the properties declared within it. That's because the only job of an interface is to describe a type.
+
+This example implements the interface by declaring a variable of the type ``Employee```.
+
+```
+
+let employee: Employee = {
+    firstName : "Emil",
+    lastName: "Andersson",
+    fullName(): string {
+        return this.firstName + " " + this.lastName;
+    }
+}
+
+employee.firstName = 10;  //* Error - Type 'number' is not assignable to type 'string'
+
+```
+
+Type checking ensures that the number ``10`` is not assignable to ``employee.firstName`` because it is expecting a ``string``.
+
+Because TypeScript has a [structural](https://www.typescriptlang.org/play#example/structural-typing) type system, an interface type with a particular set of members is considered identical to, and can be substituted for, another interface type or object type literal with an identical set of members.
+
+### Reasons for using an interface in TypeScript
+
+Interfaces are often the key point of contact between any two pieces of TypeScript code
+You can use an interface to:
+* Create shorthand names for commonly used types.
+* Drive consistency across a set of objects because every object that implements the interface operates under the same type definitions. 
+* Describe existing JavaScript APIs and clarify function parameters and return types.
+
+### How is an interface different from a type alias?
+
+The ``Employee`` interface above can also be expressed as a type alias using the ``type`` keyword:
+````
+type Employee = {
+    firstName: string;
+    lastName: string;
+    fullName(): string;
+}
+````
+The key distinction is that a type alias cannot be reopened to add new properties whereas an interface is always extendable. Also, you can only describe a union or tuple using a type alias.
+
+## Declare and instantiate an interface in TypeScript
+
+Properties can be required, optional, or read only.
+* Required: ``firstName: string;``
+* Optional: ``firstName?: string;``
+* Read Only: ``readonly firstName: string;``
+
+## Extend an interface in TypeScript
+
+Interfaces can extend each other. This enables you to copy the members of one interface into another, giving you more flexibility in how you separate your interfaces into reusable components.
+
+When extending an interface with one or more interfaces, these rules apply:
+* You must implement all the required properties from all interfaces.
+* Two interfaces can have the same property if the property has the exact same name and type.
+* If two interfaces have a property with the same name but different types, you must declare a new property such that the resulting property is a subtype of both interfaces.
+
+## Other ways to use interfaces in Typescript
+
+### Create indexable types
+
+You can use interfaces that describe array types that you can index into.
+
+Indexable types have an index signature that describes the type you can use to index into the object, along with the corresponding return types when indexing.
+
+For example, the ``IceCreamArray`` interface declares an index signature as a ``number`` and returns a ``string`` type. This index signature states that ``IceCreamArray`` is indexed with a number and it will return a string.
+
+````
+interface IceCreamArray {
+    [index: number]: string;
+}
+
+let myIceCream: IceCreamArray;
+myIceCream = ['chocolate', 'vanilla', 'strawberry'];
+let myStr: string = myIceCream[0];
+console.log(myStr);
+````
+
+### Describe a JavaScript API using an interface
+A common pain point for JavaScript and TypeScript developers alike is working with external JavaScript libraries. You can use an interface to describe existing JavaScript APIs and clarify function parameters and return types. The interface provides you with a clear understanding of what an API is expecting and what it will return.
+
+The fetch API is a native JavaScript function that you can use to interact with web services. This example declares an interface called Post for the return types in a JSON file and then uses fetch with async and await to generate a strongly typed response.
+
+```
+const fetchURL = 'https://jsonplaceholder.typicode.com/posts'
+// Interface describing the shape of our json data
+interface Post {
+    userId: number;
+    id: number;
+    title: string;
+    body: string;
+}
+async function fetchPosts(url: string) {
+    let response = await fetch(url);
+    let body = await response.json();
+    return body as Post[];
+}
+async function showPost() {
+    let posts = await fetchPosts(fetchURL);
+    // Display the contents of the first item in the response
+    let post = posts[0];
+    console.log('Post #' + post.id)
+    // If the userId is 1, then display a note that it's an administrator
+    console.log('Author: ' + (post.userId === 1 ? "Administrator" : post.userId.toString()))
+    console.log('Title: ' + post.title)
+    console.log('Body: ' + post.body)
+}
+
+showPost();
+```
+
+``async``/``await`` helpful links:
+* [Beginner's Series to JavaScript](https://docs.microsoft.com/en-us/shows/Beginners-Series-to-JavaScript/?WT.mc_id=beginner-c9-niner)
+* [Using async/await in JavaScript with long running operations](https://www.youtube.com/watch?v=CjOVvs61zAQ&feature=youtu.be)
+* [async/await for managing promises](https://www.youtube.com/watch?v=YwmlRkrxvkk)
+* [Demo: async/await for managing promises](https://www.youtube.com/watch?v=XLxIqq3HlL8)
+
+
+
+
 
 ***
 ## Wednesday 2/16/22
