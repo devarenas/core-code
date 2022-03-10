@@ -167,8 +167,7 @@ Output:
 
 #### 1. [Movies](https://github.com/corecodeio/bootcamp-from-scratch/blob/main/src/technologies/2022/week6/Exercices/E1/desc/ED1W6.md) Using ``Typescript``
 
-```
-```
+[My solution](https://github.com/devarenas/movie_typescript)
 
 ***
 #### 2. [Readme](https://github.com/corecodeio/bootcamp-from-scratch/blob/main/src/technologies/2022/week6/Exercices/E2/desc/ED2W6.md)
