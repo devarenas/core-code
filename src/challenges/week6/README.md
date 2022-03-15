@@ -328,6 +328,28 @@ showPost();
 #### 1. [Build Tower](https://www.codewars.com/kata/576757b1df89ecf5bd00073b/train/typescript) Using ``Typescript``
 
 ```
+export const towerBuilder = (nFloors: number): string[] => {
+    let block = "*";
+    let stringBlock = "";
+    let space = "";
+    let number = nFloors
+    let stringLenght = (number*2)-1;
+    let counter = stringLenght-2
+    let array: string[] = [];
+
+    for(let i=0; i<stringLenght; i++){
+        stringBlock += "*";
+    }
+
+    for(let i=number; i>0; i--){
+        array.push(space+stringBlock+space)
+        space += " ";
+        stringBlock = stringBlock.slice(0,counter)
+        counter -= 2;
+    }
+    array.reverse();
+    return array;
+  }
 ```
 
 
