@@ -4,9 +4,29 @@
 
 #### 1. Watch [this](https://www.youtube.com/watch?v=N3AkSS5hXMA) video
 
+### What is React?
+
+* React is a JS library. It was developed at Facebook on 2011.
+* React is the more popular (comparing with Angular and Vue)
+* React is based on component architecture
+* Every React app has at least 1 component, we can say React is a tree of components
+* Each component is piece of UI
+* Is built as JS ass
+  * ``class`` wich has state and render.
+  * ``state`` data to display with when component is render
+  * ``render`` responsible for how the UI should look like 
+
+* React Element > Virtual DOM
+* Dom Element > Real DOM
+
+* React > reacts to state changes
+
+
 
 ***
 #### 2. Watch [this](https://www.youtube.com/watch?v=hQAHSlTtcmY) video
+
+Tutorial completed. Result [here](https://github.com/devarenas/react-todo)
 
 ***
 #### 3. [React kata](https://www.codewars.com/kata/5a95947f4a6b342636000173)
