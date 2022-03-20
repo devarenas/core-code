@@ -38,24 +38,108 @@ Tutorial completed. Result [here](https://github.com/devarenas/react-todo)
 * [Resource 1](https://nodejs.dev/learn)
 * [Resource 2](https://www.freecodecamp.org/news/what-exactly-is-node-js-ae36e97449f5/)  (You can use any other resource of your choice.)
 
+### Node.js
+
+Node.js is a program or platform that allows to use JavaScript out of a browser to build apps with that language.
+
+* Node.js has thousands of libraries to help get to work easier. They are managed with ``npm`` (Node Package Manager)
+
+
+Hello world (Web server example) with Node.js 
+```
+const http = require('http')
+
+const hostname = '127.0.0.1'
+const port = 3000
+
+const server = http.createServer((req, res) => {
+  res.statusCode = 200
+  res.setHeader('Content-Type', 'text/plain')
+  res.end('Hello World\n')
+})
+
+server.listen(port, hostname, () => {
+  console.log(`Server running at http://${hostname}:${port}/`)
+})
+```
+
+
 ***
 #### 2. Answer the question: What is the V8 Javascript Engine? (Use your own words)
+* It is the one in charge to complete code translation into machine code and optimize it so PC can read code.
 
 ***
 #### 3. Answer the question: What is NVM and Why is it useful for Node.JS developers?
+* The Node Version Manager (NVM) is a program in charge to manage Node.JS versions
+* It is helpful whenever we do need to ger +1 node.js version on our operating system so we can decide what version to use.
+
 
 ***
 #### 4. Learn about the Node.JS module system, you can start [here](https://nodejs.org/api/modules.html).
 
 ***
 #### 5. Read about the different types of Node.JS modules
+* [resource](https://lenguajejs.com/automatizadores/introduccion/commonjs-vs-es-modules/)
+
+In the Node.js module system, each file is treated as a separate module. There are different types of modules.
+
+* ESModules
+* CommonJS 
+* AMD (Asynchronous Module Definition) 
+* IIFE (Immediately-invoked function expression)
+
 
 ***
 #### 6. Explain the differences between ESModules and CommonJS modules
 
+### ESModules
+* Modules are asynchronous, however are compatible with synchronous modules.
+* Standard for browsers
+* syntax is much more readable compared to ``require()``.
+* Older Node.js versions don’t support ES modules
+
+```
+// module.js
+export const data = 42;
+export const method = () => console.log("Hello");
+
+// index.js
+import { data, method } from "./module.js";
+
+```
+
+## CommonJS modules
+* Default for Node.js
+* Modules are synchronous
+* offers flexibility with module imports
+
+```
+// module-name.js
+module.exports = {
+  /* ... */
+}
+
+// index.js
+const module = require("./module-name.js");
+const package = require("package");
+
+module.method();
+
+```
+
 ***
 #### 7. Create your own Local Node.JS module. The module must contain a function that calculates
 the sum of two numbers. Use the previously created function in another file in any way.
+
+
+### Module creation on operation.js file
+
+![](https://github.com/devarenas/core-code/blob/main/src/images/first-module-2.PNG)
+
+### Module importon app.js file
+
+![image](https://github.com/devarenas/core-code/blob/main/src/images/first-module.PNG)
+
 
 ***
 #### 8. Watch [this](https://www.youtube.com/watch?v=h-n_gyyNly8) video about the Client-Server architecture.
