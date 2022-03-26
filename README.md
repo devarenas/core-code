@@ -13,3 +13,7 @@ Core Code bootcamp
 * Week 8 : [HTML & CSS](https://github.com/devarenas/core-code/tree/main/src/challenges/week8)
 * Week 9 : [React & Node](https://github.com/devarenas/core-code/tree/main/src/challenges/week9)
 * Week 10 : [Node & Database](https://github.com/devarenas/core-code/tree/main/src/challenges/week10)
+
+## Resources
+
+* You can access [here](https://github.com/devarenas/core-code/tree/main/src/recommended-resources) to helpful resources to help you in your progress.
