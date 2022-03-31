@@ -144,13 +144,32 @@ the sum of two numbers. Use the previously created function in another file in a
 ***
 #### 8. Watch [this](https://www.youtube.com/watch?v=h-n_gyyNly8) video about the Client-Server architecture.
 
+Completed
+
+![](https://github.com/devarenas/core-code/blob/main/src/images/client-server-arc.PNG)
+
 ***
 ## Wednesday 3/9/22
 
 #### 1. Watch [this](https://www.youtube.com/watch?v=s7wmiS2mSXY) video about what is an API.
 
+#### What is an API?
+
+Application Programming Interface (API)
+
+
+It is the messenger to send the request and provide a response to us as a customer when interacting with an app.
+
+
 ***
 #### 2. Answer the question: Are APIs only available on the Internet?
+
+If we are talkng just about programming I would say, yes, that is the main idea, however you are able to work with API´s in a local enviroment with your frontend and backend applications (localhost)
+
+
+Besides programming we are working all the time with "APIs" i.e: At the restaurant (waitress is our API)
+
+
 
 ***
 #### 3. Learn what JSON is, you can start [here](https://www.youtube.com/watch?v=iiADhChRriM&pp=ugMICgJlcxABGAE%3D).
