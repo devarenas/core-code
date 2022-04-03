@@ -352,11 +352,85 @@ Understanding this topic is important, since this technology is used to facilita
 
 #### 1. Learn about Express JS, try using the [official documentation](https://expressjs.com/), use any other resource if you like.
 
+#### Express JS
+Express is a minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications.
+
+
+With a myriad of HTTP utility methods and middleware at your disposal, creating a robust API is quick and easy.
+
+
+Express provides a thin layer of fundamental web application features, without obscuring Node.js features that you know and love.
+
+
+#### Installing Express
+
+Knowing you have node js installed run on your project the following commands:
+
+* ``npm init``
+* ``npm install express``
+
+#### Basic Routing
+
+Routing refers to determining how an application responds to a client request to a particular endpoint, which is a URI (or path) and a specific HTTP request method (GET, POST, and so on).
+
+
+Each route can have one or more handler functions, which are executed when the route is matched.
+
+
+Route definition takes the following structure:
+
+
+``app.METHOD(PATH, HANDLER)``
+
+Where:
+
+* app is an instance of express.
+* METHOD is an HTTP request method, in lowercase.
+* PATH is a path on the server.
+* HANDLER is the function executed when the route is matched. 
+
+An example using express
+
+```
+const express = require ('express');
+const app = express();
+const port = 3000;
+
+app.get('/', (request, response) => {
+    response.send("Hello World");
+});
+
+
+app.listen(port, () =>{
+    console.log(`Example app listening on port ${port}`)
+});
+
+```
+
+
 ***
 #### 2. Learn about Postman using [this](https://www.youtube.com/watch?v=VywxIQ2ZXw4) course.
 
+Postman is an API platform for building and using APIs. Postman simplifies each step of the API lifecycle and streamlines collaboration so you can create better APIs—faster.
+
 ***
 #### 3. List 3 available postman alternatives.
+
+#### Amazon API Gateway
+Amazon API Gateway is a fully managed service that makes it easy for developers to create, publish, maintain, monitor, and secure APIs at any scale.
+
+
+Using API Gateway, you can create RESTful APIs and WebSocket APIs that enable real-time two-way communication applications. API Gateway supports containerized and serverless workloads, as well as web applications.
+
+#### MuleSoft Anypoint Platform
+The MuleSoft's Anypoint Platform is a unified, single solution for iPaaS and a full life-cycle API management.
+
+
+#### Microsoft Azure API Management
+A hybrid, multicloud management platform for APIs across all environments.
+
+
+Deploy API gateways side-by-side with the APIs hosted in Azure, other clouds, and on-premises, optimizing API traffic flow. Meet security and compliance requirements while enjoying a unified management experience and full observability across all internal and external APIs.
 
 ***
 #### 4. ✨ Complete your [Interview Prep Core Challenge](https://www.notion.so/Mock-Interviews-a997bd9a907c43e58530ffca517f4cae)
