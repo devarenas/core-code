@@ -71,11 +71,68 @@ server.listen(port, hostname, () => {
 ***
 #### 3. Answer the question: What is NVM and Why is it useful for Node.JS developers?
 * The Node Version Manager (NVM) is a program in charge to manage Node.JS versions
-* It is helpful whenever we do need to ger +1 node.js version on our operating system so we can decide what version to use.
+* It is helpful whenever we do need to geT 1+ node.js version on our operating system so we can decide what version to use.
 
 
 ***
 #### 4. Learn about the Node.JS module system, you can start [here](https://nodejs.org/api/modules.html).
+
+Node.js has two module systems: CommonJS modules and ECMAScript modules.
+
+#### Enabling
+
+By default, Node.js will treat the following as CommonJS modules:
+
+* Files with a .cjs extension;
+* Files with a .js extension when the nearest parent package.json file contains a top-level field "type" with a value of "commonjs".
+* Files with a .js extension when the nearest parent package.json file doesn't contain a top-level field "type". Package authors should include the "type" field, even in packages where all sources are CommonJS. Being explicit about the type of the package will make things easier for build tools and loaders to determine how the files in the package should be interpreted.
+* Files with an extension that is not .mjs, .cjs, .json, .node, or .js (when the nearest parent package.json file contains a top-level field "type" with a value of "module", those files will be recognized as CommonJS modules only if they are being required, not when used as the command-line entry point of the program).
+
+#### Accessing main module
+
+You can run ``require.main === module``
+
+#### File modules
+Without a leading '/', './', or '../' to indicate a file, the module must either be a core module or is loaded from a node_modules folder.
+
+#### Folders as modules
+The first is to create a package.json file in the root of the folder, which specifies a main module. An example package.json file might look like this:
+```
+{ "name" : "some-library",
+  "main" : "./lib/some-library.js" }
+```
+
+#### Loading from node_modules folders
+If the module identifier passed to require() is not a core module, and does not begin with '/', '../', or './', then Node.js starts at the directory of the current module, and adds /node_modules, and attempts to load the module from that location.
+
+
+#### The module scope
+
+* ``__dirname`` The directory name of the current module. This is the same as the ``path.dirname()`` of the ``__filename``
+* ``__filename`` The file name of the current module. This is the current module file's absolute path with symlinks resolved. For a main program this is not necessarily the same as the file name used in the command line.
+
+#### exports 
+A reference to the module.exports that is shorter to type.
+
+
+#### module
+A reference to the current module, see the section about the module object. In particular, module.exports is used for defining what a module exports and makes available through require().
+
+#### require (id)
+* id ``<string>`` module name or path. Returns: ``<any>`` exported module content.
+
+
+#### import commonJS examples
+ 
+ ```
+const Express = require("express");
+const RequestHandler = require("./handlers/todos");
+const {initializeDB} = require ("./lib/db")
+const cors = require("cors");
+ 
+ ```
+
+
 
 ***
 #### 5. Read about the different types of Node.JS modules
@@ -174,11 +231,121 @@ Besides programming we are working all the time with "APIs" i.e: At the restaura
 ***
 #### 3. Learn what JSON is, you can start [here](https://www.youtube.com/watch?v=iiADhChRriM&pp=ugMICgJlcxABGAE%3D).
 
+#### JSON (JavaScript Object Notation)
+
+* JSON is a data representation format
+* Commonly Used for APIs and configs
+* Lightweight and Easy to Read/Write (comparing with XML)
+* Integrates Easily with most languages
+
+#### JSON types
+
+* Strings = "Hello World" "j"
+* Numbers => 10 1.5
+* Booleans => true false
+* null => null
+* Arrays => [1,2,3]
+* Objects => {"key": "value"}
+
+Jason document is define as ``docuementname.json``
+
+#### JSON file example:
+
+```
+
+[
+    {
+        "name": "Big Corporation",
+        "numberOfEmployees": 10000,
+        "ceo": "Mary",
+        "rating": 3.6
+    },
+    {
+        "name": "Small Startup",
+        "numberOfEmployees": 3,
+        "ceo": null,
+        "rating": 4.3
+    }
+]
+
+```
+
+
+
 ***
 #### 4. Read about HTTP, [here](https://developer.mozilla.org/es/docs/Web/HTTP) you have a good place to start.
 
+#### Hypertext Transfer Protocol (HTTP)
+
+It is an application layer protocol for the transmission of hypermedia documents, such as HTML.
+
+
+It was designed for communication between browsers and web servers.
+
+#### HTTP Access Control (CORS)
+
+HTTP Inter-Site Requests (Cross-site HTTP Requests) are HTTP requests for resources belonging to a domain other than the domain of the resource that is making the request. For example, an HTML page on domain A ``http://domaina.example/`` makes a request for an image on domain B ``http://domainb.foo/image.jpg`` via the img element. Today, web resources use other sources very often, including CSS style sheets, images, scripts and other resources. HTTP Access Control allows web developers to control how their website responds to requests from other origins.
+
+
+#### Proxies
+
+Between the client and the server, there are also different devices that manage HTTP messages. Given the layered architecture of the Web, most of these devices only manage these messages at the lower protocol levels: transport layer, network layer or physical layer, thus being transparent to the HTTP application communications layer, in addition this increases communication performance.
+
+
+* Client: The user agent is any tool that acts on behalf of the user. This function is performed in most cases by a web browser.
+* The web server: On the other side of the communication channel, there is the server, which "serves" the data that the client has requested.
+
 ***
 #### 5. Read about REST APIs, you can start [here](https://www.redhat.com/es/topics/api/what-is-a-rest-api).
+
+#### API (Application Programming Interface)
+
+It is a set of requirements that allows data communication between applications.
+
+
+For that, the API uses HTTP requests responsible for the basic operations necessary for data manipulation.
+
+
+
+The main requests are:
+
+* ``POST`` create data on the server.
+* ``GET`` read data on the host.
+* ``DELETE`` delete the information.
+* ``PUT`` update log.
+
+
+An API is a set of definitions and protocols for building and integrating application software. It’s sometimes referred to as a contract between an information provider and an information user.
+
+
+You can think of an API as a mediator between the users or clients and the resources or web services they want to get.
+
+
+#### REST (Representational State Transfer)
+
+It is a set of constraints used to make HTTP requests comply with the guidelines defined in the architecture.
+
+
+Basically, the restrictions determined by the Rest architecture are:
+
+* Client-server: Existing applications on the server and client must be separated.
+* Stateless: the requests are made independently, that is, each one executes only a certain action.
+* Cache: The API must use the cache to avoid recurring calls to the server.
+* Uniform interface: it groups four other concepts in which it is determined that the resources must be identified, the manipulation of the resources must be through representation, with self-describing messages and using links to navigate through the application.
+
+
+#### What is a Rest API?
+
+A REST API (also known as RESTful API) is an API that conforms to the constraints of REST architectural style and allows for interaction with RESTful web services. 
+
+
+Then, when talking about Rest API, it means using an API to access back-end applications, so that communication is done with the standards defined by the Rest architecture style.
+
+
+Understanding this topic is important, since this technology is used to facilitate communication between a back-end application and different forms of front-end presentations, that is, it is essential for the development of cross-platform applications.
+ 
+
+
 
 ***
 ## Thursday 3/10/22
