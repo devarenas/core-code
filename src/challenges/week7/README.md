@@ -3,7 +3,7 @@
 
 ## Monday 2/21/22
 
-#### 1. [TicTacToe](https://github.com/corecodeio/bootcamp-from-scratch/blob/main/src/technologies/2022/week7/Exercices/E0/desc/ED0W7.md) using ``typescript``
+### 1. [TicTacToe](https://github.com/corecodeio/bootcamp-from-scratch/blob/main/src/technologies/2022/week7/Exercices/E0/desc/ED0W7.md) using ``typescript``
 
 ```
 ```
