@@ -402,6 +402,31 @@ export const high = (str: string): string  => {
 #### 3. [Equal Sides Of An Array](https://www.codewars.com/kata/5679aa472b8f57fb8c000047/train/typescript) Using ``Typescript``
 
 ```
+export function findEvenIndex(arr: number[]): number {
+
+  let left = 0;
+  let right = 0;
+  let comparison = -1;
+  
+  for(let index=0, length = arr.length; index < length; index++){
+    for(let i=0; i<index;i++){
+      left += arr[i];
+    }
+  
+    for(let i=index+1; i> index && i< arr.length; i++){
+      right += arr[i];
+    }
+  
+    if(left === right){
+      comparison = index;
+      break;
+    }
+    left =0;
+    right=0;
+  }
+  
+  return comparison;
+}
 ```
 
 
@@ -409,6 +434,21 @@ export const high = (str: string): string  => {
 #### 4. [Meeting](https://www.codewars.com/kata/59df2f8f08c6cec835000012/train/typescript) Using ``Typescript``
 
 ```
+export function meeting(s: string): string {
+
+  let nl = s.split(";")
+
+  nl.forEach((friend, index) => {
+    nl[index] = friend.replace(":", " ").toUpperCase();
+  })
+  nl.forEach((friend, index) => {
+    nl[index] = "("+friend.split(" ").reverse().join(", ")+")";
+  })
+
+  let newS = nl.sort().join("");
+
+  return newS;
+}
 ```
 
 
