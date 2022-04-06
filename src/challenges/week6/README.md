@@ -357,6 +357,44 @@ export const towerBuilder = (nFloors: number): string[] => {
 #### 2. [Highest Scoring Word](https://www.codewars.com/kata/57eb8fcdf670e99d9b000272/train/typescript) Using ``Typescript``
 
 ```
+export const high = (str: string): string  => {
+  
+  interface Data {
+  a: number,  b: number,  c: number,  d: number,  e: number,  f: number,  g: number,  h: number,  i: number,  j: number,
+  k: number, l: number, m: number, n: number, o: number, p: number, q: number, r: number, s: number, t: number,
+  u: number, v: number, w: number, x: number, y: number, z: number
+
+}
+
+  let points = {
+    a: 1,  b: 2,  c: 3,  d: 4,  e: 5,  f: 6,  g: 7,  h: 8,  i: 9,  j: 10,
+    k: 11, l: 12, m: 13, n: 14, o: 15, p: 16, q: 17, r: 18, s: 19, t: 20,
+    u: 21, v: 22, w: 23, x: 24, y: 25, z: 26
+  }
+
+  let stringSplit = str.split(' ');
+  let sumArray: number[] = [];
+
+  stringSplit.forEach((word) =>{
+    let sum = 0;
+    for(let i=0; i < word.length; i++){
+      for(let nn in points ){
+        if(word[i] === nn){
+          sum += points[nn as keyof Data];
+        }
+      }
+          
+    }
+    sumArray.push(sum);
+    sum=0;
+    
+  });
+  
+  let max = Math.max(...sumArray);
+  let wordResult = sumArray.indexOf(max);
+  
+
+  return stringSplit[wordResult];
 ```
 
 
